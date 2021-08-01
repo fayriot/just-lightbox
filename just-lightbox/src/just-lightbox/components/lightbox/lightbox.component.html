@@ -1,0 +1,17 @@
+<div class="j-lightbox__overlay">
+    <div
+        class="j-lightbox__wrapper"
+        role="dialog"
+        aria-modal="true"
+        [attr.aria-labelledby]="labelledby"
+        [attr.aria-describedby]="describedby"
+    >
+        <div class="j-lightbox__loader" *ngIf="!loaded"></div>
+        <img
+            class="j-lightbox__image"
+            #lightboxImage
+            [src]="imageSrc"
+            (load)="onImageLoad($event)"
+        />
+    </div>
+</div>

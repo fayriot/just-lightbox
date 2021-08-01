@@ -1,0 +1,83 @@
+<nav>
+    <div class="links">
+        <a href="https://github.com/fayriot/just-lightbox" target="_blank"
+            ><i class="devicon-github-plain"></i
+        ></a>
+        <a href="https://github.com/fayriot/just-lightbox" target="_blank"
+            ><i class="devicon-npm-original-wordmark"></i
+        ></a>
+    </div>
+</nav>
+
+<section>
+    <div class="section__content">
+        <h1>Just Lightbox</h1>
+
+        <h3>Simple, lightweight Angular image lightbox library with no dependencies</h3>
+
+        <h4>Examples</h4>
+
+        <div class="images">
+            <div class="images__container">
+                <pre>
+                    <code [highlight]="codeExamples.customImageSource" [languages]="['html']"></code>
+                </pre>
+
+                <img
+                    *ngFor="let item of images.customImageSource"
+                    [describedby]="item.describedby"
+                    [jLightbox]="item.src"
+                    [labelledby]="item.labelledby"
+                    [src]="item.thumb"
+                    class="images__item"
+                />
+            </div>
+
+            <div class="images__container">
+                <pre>
+                    <code [highlight]="codeExamples.default" [languages]="['html']"></code>
+                </pre>
+
+                <img
+                    *ngFor="let item of images.default"
+                    [src]="item.src"
+                    class="images__item"
+                    jLightbox
+                />
+            </div>
+
+            <div class="images__container">
+                <pre>
+                    <code [highlight]="codeExamples.links" [languages]="['html']"></code>
+                </pre>
+
+                <a
+                    *ngFor="let item of images.links"
+                    [href]="item.src"
+                    class="images__item"
+                    jLightbox
+                >
+                    <img [src]="item.thumb" class="images__item" />
+                </a>
+            </div>
+        </div>
+
+        <h4>Installation</h4>
+
+        <pre>
+             <code [highlight]="codeExamples.installation" [languages]="['ts']"></code>
+        </pre>
+
+        <h4>Configuration</h4>
+
+        <pre>
+             <code [highlight]="codeExamples.configuration" [languages]="['ts']"></code>
+        </pre>
+
+        <h4>Customization</h4>
+
+        <pre>
+             <code [highlight]="codeExamples.css" [languages]="['css']"></code>
+        </pre>
+    </div>
+</section>

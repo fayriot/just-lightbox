@@ -1,0 +1,67 @@
+{
+	"$schema": "../node_modules/ng-packagr/package.schema.json",
+	"name": "just-lightbox",
+	"version": "0.0.0",
+	"author": {
+		"name": "Kirill Khrushchöv"
+	},
+	"main": "./src/index.ts",
+	"ngPackage": {
+		"assets": [
+			"CHANGELOG.md"
+		],
+		"lib": {
+			"entryFile": "src/index.ts"
+		}
+	},
+	"np": {
+		"contents": "dist",
+		"anyBranch": true,
+		"yarn": false
+	},
+	"scripts": {
+		"rimraf": "npx rimraf",
+		"conventional-changelog": "npx ../node_modules/conventional-changelog/index.js",
+		"changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
+		"changelog:add": "git add --force CHANGELOG.md package.json",
+		"changelog:commit": "git commit -m \"Updated CHANGELOG.md\"",
+		"version": "npm run conventional-changelog -p angular -i CHANGELOG.md -s -r && npm run build  && npm run changelog:add && npm run changelog:commit",
+		"build": "npx ../node_modules/ng-packagr/cli/main.js -p package.json",
+		"test": "cd .. && npm run test",
+		"release": "npm run lint && npx np",
+		"postrelease": "git add package.json package-lock.json CHANGELOG.md && git commit -m \"🐣 Version released\" && git push",
+		"lint": "cd .. && npm run lint"
+	},
+	"maintainers": [
+		{
+			"email": "fayriot@gmail.com",
+			"name": "Kirill Khrushchöv"
+		}
+	],
+	"homepage": "https://github.com/fayriot/just-lightbox",
+	"repository": {
+		"url": "https://github.com/fayriot/just-lightbox"
+	},
+	"keywords": [
+		"lightbox",
+		"angular"
+	],
+	"license": "MIT",
+	"description": "",
+	"engines": {
+		"node": ">= 10.13.0"
+	},
+	"peerDependencies": {
+		"@angular/common": ">=11.0.0 <13.0.0",
+		"@angular/core": ">=11.0.0 <13.0.0",
+		"@angular/forms": ">=11.0.0 <13.0.0",
+		"@angular/platform-browser": ">=11.0.0 <13.0.0",
+		"@angular/router": ">=11.0.0 <13.0.0"
+	},
+	"dependencies": {
+		"tslib": "^2.0.0"
+	},
+	"devDependencies": {
+		"@types/jasmine": "^3.5.11"
+	}
+}
