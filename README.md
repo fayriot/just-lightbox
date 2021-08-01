@@ -40,7 +40,7 @@ It works with a hyperlinks
 </a>
 ```
 
-##Configuration
+## Configuration
 
 ```ts
 JustLightboxModule.forRoot({
@@ -52,7 +52,8 @@ JustLightboxModule.forRoot({
 });
 ```
 
-##Customization
+## Customization
+
 Lightbox uses css variables
 
 ```css
