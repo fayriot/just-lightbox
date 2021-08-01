@@ -4,7 +4,7 @@ Simple, lightweight Angular image lightbox library with no dependencies
 
 ## Demo
 
-//
+[View Demo](https://fayriot.github.io/)
 
 ## Installation
 

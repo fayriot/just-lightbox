@@ -4,7 +4,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
+        "build": "ng build --configuration production",
         "clean": "npm run clean:build && npm run clean:tests",
         "clean:build": "npx rimraf -- dist build",
         "clean:tests": "npx rimraf just-lightbox/src/tests/**/*.+{js,js.map,d.ts,metadata.json}",
