@@ -29,7 +29,7 @@
 		"build": "npx ../node_modules/ng-packagr/cli/main.js -p package.json",
 		"test": "cd .. && npm run test",
 		"release": "npm run lint && npx np",
-		"postrelease": "git add package.json package-lock.json CHANGELOG.md && git commit -m \"🐣 Version released\" && git push",
+		"postrelease": "git add . && git commit --allow-empty -m \"🐣 Version released\" && git push --follow-tags",
 		"lint": "cd .. && npm run lint"
 	},
 	"maintainers": [
