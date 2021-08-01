@@ -1,5 +1,9 @@
 # Just Lightbox
 
+[![Build Status](https://travis-ci.com/fayriot/just-lightbox.svg?branch=main)](https://travis-ci.com/fayriot/just-lightbox)
+[![npm](https://img.shields.io/npm/v/just-lightbox.svg)](https://www.npmjs.com/package/just-lightbox)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/fayriot/just-lightbox/blob/main/LICENSE)
+
 Simple, lightweight Angular image lightbox library with no dependencies
 
 ## Demo
