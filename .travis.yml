@@ -3,3 +3,5 @@ node_js:
   - 14
   - 12
   - 10
+script:
+  - cd just-lightbox && npm run build
