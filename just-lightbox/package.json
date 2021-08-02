@@ -24,7 +24,7 @@
 		"copy:readme": "npm run cpx -- README.md ../",
 		"conventional-changelog": "npx ../node_modules/conventional-changelog-cli/cli.js",
 		"changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s -r 0",
-		"version": "npm run changelog && git add CHANGELOG.md",
+		"version": "npm run changelog && git add CHANGELOG.md && npm run build",
 		"build": "npx ../node_modules/ng-packagr/cli/main.js -p package.json",
 		"test": "cd .. && npm run test",
 		"lint": "cd .. && npm run lint",
