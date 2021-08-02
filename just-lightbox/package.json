@@ -20,17 +20,16 @@
 		"yarn": false
 	},
 	"scripts": {
-		"rimraf": "npx rimraf",
-		"conventional-changelog": "npx ../node_modules/conventional-changelog/index.js",
-		"changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
-		"changelog:add": "git add --force CHANGELOG.md package.json",
-		"changelog:commit": "git commit -m \"Updated CHANGELOG.md\"",
-		"version": "npm run conventional-changelog -p angular -i CHANGELOG.md -s -r && npm run build  && npm run changelog:add && npm run changelog:commit",
+		"cpx": "npx cpx",
+		"copy:readme": "npm run cpx -- README.md ../",
+		"conventional-changelog": "npx ../node_modules/conventional-changelog-cli/cli.js",
+		"changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s -r 0",
+		"version": "npm run changelog && git add CHANGELOG.md",
 		"build": "npx ../node_modules/ng-packagr/cli/main.js -p package.json",
 		"test": "cd .. && npm run test",
+		"lint": "cd .. && npm run lint",
 		"release": "npm run lint && npx np",
-		"postrelease": "git add . && git commit --allow-empty -m \"🐣 Version released\" && git push",
-		"lint": "cd .. && npm run lint"
+		"postrelease": "npm run copy:readme && git add . && git commit -m \"🐣 Version released\" && git push"
 	},
 	"maintainers": [
 		{
