@@ -1,7 +1,7 @@
 {
 	"$schema": "../node_modules/ng-packagr/package.schema.json",
 	"name": "just-lightbox",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"author": {
 		"name": "Kirill Khrushchöv"
 	},
