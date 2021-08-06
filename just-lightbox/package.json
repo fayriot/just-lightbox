@@ -16,7 +16,7 @@
 		}
 	},
 	"np": {
-		"contents": "dist",
+		"contents": "./dist",
 		"anyBranch": true,
 		"yarn": false
 	},
