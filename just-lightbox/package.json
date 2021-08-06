@@ -30,7 +30,7 @@
 		"test": "cd .. && npm run test",
 		"lint": "cd .. && npm run lint",
 		"release": "npm run lint && npm exec np",
-		"postrelease": "npm run copy:readme && git add . && git commit -m \"🐣 Version released\" && git push"
+		"postrelease": "npm run copy:readme && git add ../README.md && git commit -m \"🐣 Version released\" && git push"
 	},
 	"maintainers": [
 		{
