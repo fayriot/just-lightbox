@@ -1,19 +1,22 @@
 {
     "name": "just-lightbox",
     "version": "0.0.0",
+    "engines": {
+        "npm": ">=7.0"
+    },
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build --configuration production",
+        "build": "ng build --configuration production --base-href /j-lightbox/ --deploy-url /j-lightbox/",
         "clean": "npm run clean:build && npm run clean:tests",
-        "clean:build": "npx rimraf -- dist build",
-        "clean:tests": "npx rimraf just-lightbox/src/tests/**/*.+{js,js.map,d.ts,metadata.json}",
-        "test": "npm run clean:tests && npx karma start karma.conf.js",
-        "test:watch": "npm run clean:tests && npx karma start karma.conf.debug.js",
-        "lint": "npx stylelint --config ./.stylelintrc \"src/**/*.less\" && npx eslint --config ./.eslintrc.js --debug \"src/**/*.{js,ts,html}\"",
-        "lint:fix": "npx stylelint --config ./.stylelintrc --fix \"src/**/*.less\" && npx eslint --config ./.eslintrc.js --fix --debug \"src/**/*.{js,ts,html}\"",
-        "lint:less": "npx stylelint --config ./.stylelintrc \"src/**/*.less\"",
-        "lint:less:fix": "npx stylelint --config ./.stylelintrc --fix \"src/**/*.less\""
+        "clean:build": "npm exec -- rimraf -- dist build",
+        "clean:tests": "npm exec -- rimraf just-lightbox/src/tests/**/*.+{js,js.map,d.ts,metadata.json}",
+        "test": "npm run clean:tests && npm exec -- karma start karma.conf.js",
+        "test:watch": "npm run clean:tests && npm exec -- karma start karma.conf.debug.js",
+        "lint": "npm exec -- stylelint --config ./.stylelintrc \"src/**/*.less\" && npm exec -- eslint --config ./.eslintrc.js --debug \"src/**/*.{js,ts,html}\"",
+        "lint:fix": "npm exec -- stylelint --config ./.stylelintrc --fix \"src/**/*.less\" && npm exec -- eslint --config ./.eslintrc.js --fix --debug \"src/**/*.{js,ts,html}\"",
+        "lint:less": "npm exec -- stylelint --config ./.stylelintrc \"src/**/*.less\"",
+        "lint:less:fix": "npm exec -- stylelint --config ./.stylelintrc --fix \"src/**/*.less\""
     },
     "private": false,
     "dependencies": {
@@ -83,13 +86,13 @@
     },
     "lint-staged": {
         "*.{less,css}": [
-            "npx stylelint --fix"
+            "npm exec stylelint --fix"
         ],
         "*.{md,json,html}": [
-            "npx prettier --write"
+            "npm exec prettier --write"
         ],
         "*.{js,ts,html}": [
-            "npx eslint --fix"
+            "npm exec eslint --fix"
         ]
     }
 }
