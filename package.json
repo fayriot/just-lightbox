@@ -6,7 +6,7 @@
     },
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --host 192.168.0.3",
+        "start": "ng serve",
         "build": "ng build --configuration production --base-href /j-lightbox/ --deploy-url /j-lightbox/",
         "clean": "npm run clean:build && npm run clean:tests",
         "clean:build": "npm exec -- rimraf -- dist build",
@@ -16,7 +16,8 @@
         "lint": "npm exec -- stylelint --config ./.stylelintrc \"src/**/*.less\" && npm exec -- eslint --config ./.eslintrc.js --debug \"src/**/*.{js,ts,html}\"",
         "lint:fix": "npm exec -- stylelint --config ./.stylelintrc --fix \"src/**/*.less\" && npm exec -- eslint --config ./.eslintrc.js --fix --debug \"src/**/*.{js,ts,html}\"",
         "lint:less": "npm exec -- stylelint --config ./.stylelintrc \"src/**/*.less\"",
-        "lint:less:fix": "npm exec -- stylelint --config ./.stylelintrc --fix \"src/**/*.less\""
+        "lint:less:fix": "npm exec -- stylelint --config ./.stylelintrc --fix \"src/**/*.less\"",
+        "release": "cd just-lightbox && npm run release"
     },
     "private": false,
     "dependencies": {
