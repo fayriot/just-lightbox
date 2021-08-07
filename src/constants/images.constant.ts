@@ -11,6 +11,12 @@ export const CUSTOM_IMAGE_SOURCE = [
         src: 'https://placekitten.com/300/300',
         thumb: 'https://placekitten.com/300/300',
     },
+    {
+        describedby: 'Animated gif dialog describe',
+        labelledby: 'IAnimated gif dialog label',
+        src: 'assets/images/gesture-example-full.gif',
+        thumb: 'assets/images/gesture-example-thumb.gif',
+    },
 ];
 
 export const DEFAULT_IMAGES = [

@@ -12,11 +12,18 @@ export const CODE_EXAMPLES = {
         '})',
     configuration:
         'JustLightboxModule.forRoot({\n' +
-        '    containerOffset: { // image paddings in px\n' +
-        '        vertical: 20,\n' +
-        '        horizontal: 30,\n' +
+        '    // Image paddings in px\n' +
+        '    containerOffset: {\n' +
+        '        vertical: 20, // Default: 0\n' +
+        '        horizontal: 30, // Default: 0\n' +
         '    },\n' +
-        '})',
+        '    gesturesEnabled: true, // Pinch zoom & pan gestures. Default: true\n' +
+        '    wheelEnabled: true, // Wheel/trackpad zoom & pan. Default: false\n' +
+        '    wheelSensitivity: {\n' +
+        '        zoom: 10, // Default: 10\n' +
+        '        pan: 5, // Default: 5\n' +
+        '    }\n' +
+        '});',
     css:
         '--j-lightbox__z-index: 10000000;\n' +
         '--j-lightbox__overlay__background-color: rgba(0, 0, 0, 0.9);\n' +

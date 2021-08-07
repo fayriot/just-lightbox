@@ -8,7 +8,7 @@ import {HighlightModule, HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, JustLightboxModule.forRoot(), HighlightModule],
+    imports: [BrowserModule, JustLightboxModule.forRoot({wheelEnabled: true}), HighlightModule],
     providers: [
         {
             provide: HIGHLIGHT_OPTIONS,

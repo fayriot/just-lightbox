@@ -52,7 +52,7 @@
 		"viewer"
 	],
 	"license": "MIT",
-	"description": "Simple, lightweight Angular image lightbox library with no dependencies",
+	"description": "Simple, lightweight Angular image lightbox library with gestures support & no dependencies",
 	"engines": {
 		"node": ">= 10.13.0"
 	},

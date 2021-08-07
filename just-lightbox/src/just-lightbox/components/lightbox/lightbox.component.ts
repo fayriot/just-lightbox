@@ -15,7 +15,7 @@ import {JUST_LIGHTBOX_OPTIONS} from '../../tokens';
 import {IJustLightboxOptions} from '../../models';
 
 const DOCUMENT_CLASS_OPEN = 'j-lightbox__open';
-const DOCUMENT_SCROLL_EVENTS = ['touchmove', 'DOMMouseScroll', 'wheel'];
+const DOCUMENT_SCROLL_EVENTS = ['touchMove', 'DOMMouseScroll', 'wheel'];
 
 @Component({
     selector: 'app-lightbox',
@@ -30,7 +30,7 @@ const DOCUMENT_SCROLL_EVENTS = ['touchmove', 'DOMMouseScroll', 'wheel'];
 export class LightboxComponent implements OnInit, OnDestroy {
     private _document?: HTMLDocument;
 
-    @ViewChild('lightboxImage') lightboxImage: ElementRef;
+    @ViewChild('lightboxImage') image: ElementRef;
 
     close$ = new EventEmitter();
 
@@ -47,11 +47,9 @@ export class LightboxComponent implements OnInit, OnDestroy {
         this._document = document as HTMLDocument;
     }
 
-    @HostListener('click') onClick() {
-        this.close();
-    }
-
-    @HostListener('document:keyup.escape') onKeyupEscape() {
+    @HostListener('click')
+    @HostListener('document:keyup.escape')
+    onClose() {
         this.close();
     }
 
@@ -90,7 +88,7 @@ export class LightboxComponent implements OnInit, OnDestroy {
 
         const clientWidth = this._document.documentElement.clientWidth;
         const clientHeight = this._document.documentElement.clientHeight;
-        const lightboxImageStyle = this.lightboxImage.nativeElement.style;
+        const lightboxImageStyle = this.image.nativeElement.style;
         const widthOffset = this.options.containerOffset.horizontal * 2;
         const heightOffset = this.options.containerOffset.vertical * 2;
 
