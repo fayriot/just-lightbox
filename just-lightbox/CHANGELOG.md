@@ -1,4 +1,8 @@
-## [0.1.6](https://github.com/fayriot/just-lightbox/compare/0.1.4...0.1.6) (2021-08-06)
+# [0.2.0](https://github.com/fayriot/just-lightbox/compare/v0.1.6...v0.2.0) (2021-08-07)
+
+
+
+## [0.1.6](https://github.com/fayriot/just-lightbox/compare/0.1.4...v0.1.6) (2021-08-06)
 
 
 

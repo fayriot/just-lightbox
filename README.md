@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/just-lightbox.svg)](https://www.npmjs.com/package/just-lightbox)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/fayriot/just-lightbox/blob/main/LICENSE)
 
-Simple, lightweight Angular image lightbox library with no dependencies
+Simple, lightweight Angular image lightbox library with gestures support & no dependencies
 
 ## Demo
 
@@ -48,11 +48,17 @@ It works with a hyperlinks
 
 ```ts
 JustLightboxModule.forRoot({
+    // Image paddings in px
     containerOffset: {
-        // image paddings in px
-        vertical: 20,
-        horizontal: 30,
+        vertical: 20, // Default: 0
+        horizontal: 30, // Default: 0
     },
+    gesturesEnabled: true, // Pinch zoom & pan gestures. Default: true
+    wheelEnabled: true, // Wheel/trackpad zoom & pan. Default: false
+    wheelSensitivity: {
+        zoom: 10, // Default: 10
+        pan: 5, // Default: 5
+    }
 });
 ```
 
