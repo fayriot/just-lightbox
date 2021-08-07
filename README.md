@@ -77,6 +77,5 @@ Lightbox uses css variables
 
 ## Roadmap
 
--   Gestures
 -   Events
 -   Image clusters
