@@ -1,7 +1,7 @@
 {
 	"$schema": "../node_modules/ng-packagr/package.schema.json",
 	"name": "just-lightbox",
-	"version": "0.1.6",
+	"version": "0.2.0",
 	"author": {
 		"name": "Kirill Khrushchöv"
 	},
@@ -30,7 +30,7 @@
 		"test": "cd .. && npm run test",
 		"lint": "cd .. && npm run lint",
 		"release": "npm run lint && npm exec np",
-		"postrelease": "npm run copy:readme && git add ../README.md && git commit -m \"🐣 Version released\" && git push"
+		"postrelease": "npm run copy:readme && git add package.json package-lock.json ../README.md && git commit -m \"🐣 Version released\" && git push"
 	},
 	"maintainers": [
 		{
