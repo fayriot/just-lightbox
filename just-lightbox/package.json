@@ -49,7 +49,11 @@
 		"img",
 		"photo",
 		"view",
-		"viewer"
+		"viewer",
+		"gesture",
+		"zoom",
+		"pinch",
+		"pan"
 	],
 	"license": "MIT",
 	"description": "Simple, lightweight Angular image lightbox library with gestures support & no dependencies",
