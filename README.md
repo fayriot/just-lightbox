@@ -1,5 +1,6 @@
 # Just Lightbox
 
+[![demo](https://img.shields.io/badge/-demo-blue)](https://fayriot.github.io/j-lightbox/)
 [![Build Status](https://travis-ci.com/fayriot/just-lightbox.svg?branch=main)](https://travis-ci.com/fayriot/just-lightbox)
 [![npm](https://img.shields.io/npm/v/just-lightbox.svg)](https://www.npmjs.com/package/just-lightbox)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/fayriot/just-lightbox/blob/main/LICENSE)
@@ -8,7 +9,7 @@ Simple, lightweight Angular image lightbox library with gestures support & no de
 
 ## Demo
 
-[View Demo](https://fayriot.ru/j-lightbox/)
+[View Demo](https://fayriot.github.io/j-lightbox/)
 
 ## Installation
 
