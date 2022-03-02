@@ -18,7 +18,8 @@
 	"np": {
 		"contents": "./dist",
 		"anyBranch": true,
-		"yarn": false
+		"yarn": false,
+        "yolo": true
 	},
 	"scripts": {
 		"cpx": "npm exec -- cpx",
