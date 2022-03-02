@@ -7,7 +7,7 @@ export function getUserAgent() {
         return UserAgentEnum.Android;
     }
 
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
         return UserAgentEnum.Ios;
     }
 
