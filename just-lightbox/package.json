@@ -29,7 +29,7 @@
 		"build": "node ../node_modules/ng-packagr/cli/main.js -p package.json",
 		"test": "cd .. && npm run test",
 		"lint": "cd .. && npm run lint",
-		"release": "npm run lint && npm exec np",
+		"release": "npm exec np",
 		"postrelease": "npm run copy:readme && git add package.json package-lock.json ../README.md && git commit -m \"🐣 Version released\" && git push"
 	},
 	"maintainers": [
