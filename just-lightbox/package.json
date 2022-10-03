@@ -62,10 +62,10 @@
 		"node": ">= 10.13.0"
 	},
 	"peerDependencies": {
-		"@angular/common": ">=11.0.0 <14.0.0",
-		"@angular/core": ">=11.0.0 <14.0.0",
-		"@angular/forms": ">=11.0.0 <14.0.0",
-		"@angular/platform-browser": ">=11.0.0 <14.0.0",
-		"@angular/router": ">=11.0.0 <14.0.0"
+		"@angular/common": ">=11.0.0",
+		"@angular/core": ">=11.0.0",
+		"@angular/forms": ">=11.0.0",
+		"@angular/platform-browser": ">=11.0.0",
+		"@angular/router": ">=11.0.0"
 	}
 }
