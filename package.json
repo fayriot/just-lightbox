@@ -44,7 +44,6 @@
         "affected:dep-graph": "nx affected:dep-graph",
         "affected": "nx affected",
         "build": "npm exec -- nx build just-lightbox-demo",
-        "deploy": "npm run build:prod && npm exec -- gh-pages -d dist/apps/just-lightbox-demo",
         "format": "nx format:write",
         "format:write": "nx format:write",
         "format:check": "nx format:check",
