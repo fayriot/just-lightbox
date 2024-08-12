@@ -75,8 +75,3 @@ Lightbox uses css variables
 --j-lightbox__loader__animation-duration: 1.1s;
 --j-lightbox__overlay__cursor: zoom-out;
 ```
-
-## Roadmap
-
--   Events
--   Image clusters
