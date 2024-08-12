@@ -1,0 +1,16 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "search.exclude": {
+        "coverage": true,
+        "dist": true,
+        "build": true
+    },
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+    "eslint.workingDirectories": ["./src/*"],
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.endOfLine": "crlf"
+}

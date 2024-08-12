@@ -1,0 +1,70 @@
+{
+    "name": "just-lightbox",
+    "version": "18.0.0-0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "np": {
+        "contents": "./dist"
+    },
+    "author": {
+        "name": "Kirill Khrushchöv"
+    },
+    "homepage": "https://github.com/fayriot/just-lightbox",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fayriot/just-lightbox.git"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "license": "MIT",
+    "description": "Simple, lightweight Angular image lightbox library with gestures support & no dependencies",
+    "keywords": [
+        "lightbox",
+        "angular",
+        "image",
+        "img",
+        "photo",
+        "view",
+        "viewer",
+        "gesture",
+        "zoom",
+        "pinch",
+        "pan"
+    ],
+    "bugs": {
+        "url": "https://github.com/fayriot/just-lightbox/issues"
+    },
+    "maintainers": [
+        {
+            "email": "fayriot@gmail.com",
+            "name": "Kirill Khrushchöv"
+        }
+    ],
+    "scripts": {
+        "build": "npm exec -- ng-packagr -p ng-package.json --config tsconfig.lib.json",
+        "clean": "npm run clean:build && npm run clean:tests",
+        "clean:build": "npm run rimraf -- dist build",
+        "clean:tests": "npm run rimraf -- coverage && npm run rimraf -- tests/**/*.+{js,js.map,d.ts,metadata.json}",
+        "copy:assets": "npm exec -- cpy -- CHANGELOG.md dist",
+        "conventional-changelog": "conventional-changelog",
+        "changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
+        "changelog:add": "git add --force CHANGELOG.md package.json",
+        "changelog:commit": "git commit -m \"Updated CHANGELOG.md\"",
+        "version": "npm exec -- conventional-changelog -p angular -i CHANGELOG.md -s -r && npm run build && npm run copy:assets && npm run changelog:add && npm run changelog:commit",
+        "release": "npm exec -- np",
+        "test": "npm exec -- nx test just-lightbox"
+    },
+    "dependencies": {
+        "tslib": "^2.2.0"
+    },
+    "peerDependencies": {
+        "@angular/common": ">=18.0.0 <19.0.0",
+        "@angular/core": ">=18.0.0 <19.0.0",
+        "@angular/platform-browser": ">=18.0.0 <19.0.0"
+    },
+    "devDependencies": {
+        "@angular/platform-browser-dynamic": ">=18.0.0 <19.0.0"
+    }
+}

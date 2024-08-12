@@ -1,10 +1,1 @@
-dist
 node_modules
-coverage
-*.less
-*.css
-**/*.html
-**/*.spec.ts
-test.ts
-.eslintrc.js
-*.d.ts

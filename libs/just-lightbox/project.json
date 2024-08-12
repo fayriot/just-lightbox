@@ -1,0 +1,26 @@
+{
+    "name": "just-lightbox",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "library",
+    "sourceRoot": "libs/just-lightbox/src",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/libs/just-lightbox"],
+            "options": {
+                "jestConfig": "libs/just-lightbox/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+                "lintFilePatterns": [
+                    "libs/just-lightbox/src/**/*.ts",
+                    "libs/just-lightbox/src/**/*.html"
+                ]
+            }
+        }
+    },
+    "tags": []
+}
