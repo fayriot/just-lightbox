@@ -1,5 +1,5 @@
 language: node_js
 node_js:
-  - 16
+    - 20
 script:
-  - cd just-lightbox && npm run build
+    - npm run build

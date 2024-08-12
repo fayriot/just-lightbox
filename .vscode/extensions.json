@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+        "angular.ng-template",
+        "nrwl.angular-console",
+        "esbenp.prettier-vscode",
+        "firsttris.vscode-jest-runner",
+        "dbaeumer.vscode-eslint",
+        "Orta.vscode-jest",
+        "stylelint.vscode-stylelint",
+        "steoates.autoimport",
+        "aaron-bond.better-comments",
+        "devboosts.angular-productivity-pack",
+        "cyrilletuzi.angular-schematics",
+        "infinity1207.angular2-switcher",
+        "naumovs.color-highlight",
+        "vunguyentuan.vscode-css-variables",
+        "p-de-jong.vscode-html-scss",
+        "christian-kohler.npm-intellisense",
+        "mrmlnc.vscode-scss",
+        "pmneo.tsimporter",
+        "coenraads.bracket-pair-colorizer",
+        "pranaygp.vscode-css-peek",
+        "cschlosser.doxdocgen"
+
+  ]
+}
