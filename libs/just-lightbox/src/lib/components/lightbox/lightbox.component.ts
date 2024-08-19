@@ -3,7 +3,6 @@ import {
     ChangeDetectionStrategy,
     Component,
     ElementRef,
-    EventEmitter,
     HostListener,
     Inject,
     OnDestroy,
@@ -11,6 +10,7 @@ import {
     ViewChild,
     ViewEncapsulation,
 } from '@angular/core';
+import { Subject } from 'rxjs';
 import { IJustLightboxOptions } from '../../models';
 import { JUST_LIGHTBOX_OPTIONS } from '../../tokens';
 
@@ -32,7 +32,7 @@ export class LightboxComponent implements OnInit, OnDestroy {
 
     @ViewChild('lightboxImage') image: ElementRef | undefined;
 
-    close$ = new EventEmitter();
+    close$: Subject<void> = new Subject<void>();
 
     imageSrc: string | undefined;
     labelledby: string | undefined;
@@ -41,10 +41,10 @@ export class LightboxComponent implements OnInit, OnDestroy {
     loaded: boolean = false;
 
     constructor(
-        @Inject(DOCUMENT) public document: any,
+        @Inject(DOCUMENT) public document: Document,
         @Inject(JUST_LIGHTBOX_OPTIONS) private options: IJustLightboxOptions,
     ) {
-        this._document = document as Document;
+        this._document = document;
     }
 
     @HostListener('click')
@@ -74,7 +74,7 @@ export class LightboxComponent implements OnInit, OnDestroy {
     }
 
     close() {
-        this.close$.next(true);
+        this.close$.next();
     }
 
     ngOnDestroy() {

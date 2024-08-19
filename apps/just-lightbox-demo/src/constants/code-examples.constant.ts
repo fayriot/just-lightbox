@@ -1,9 +1,21 @@
 export const CODE_EXAMPLES = {
-    customImageSource: '<img src="path-to-thumbnail" jLightbox="path-to-full-image">',
+    customImageSource:
+        '<img src="path-to-thumbnail" jLightbox="path-to-full-image">',
     default: '<img src="path-to-full-image" jLightbox>',
     links: `<a href="path-to-full-image" jLightbox>
     <img src="path-to-thumbnail">
 </a>`,
+    component: `import { JustLightboxService } from 'just-lightbox';
+
+constructor(private lightbox: JustLightboxService) {}
+
+open() {
+    this.lightbox.open({
+        describedby: 'aria-describedby',
+        labelledby: 'araia-labelledby',
+        imageSrc: 'path-to-full-image',
+    });
+}`,
     installation:
         "import {JustLightboxModule} from 'just-lightbox';\n" +
         '\n' +

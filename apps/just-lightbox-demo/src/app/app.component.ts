@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { JustLightboxService } from 'just-lightbox';
 import {
     CODE_EXAMPLES,
     CUSTOM_IMAGE_SOURCE,
@@ -33,4 +34,14 @@ export class AppComponent {
         default: DEFAULT_IMAGES,
         links: LINKS,
     };
+
+    constructor(private lightbox: JustLightboxService) {}
+
+    openLightbox(): void {
+        this.lightbox.open({
+            describedby: 'aria-describedby description',
+            labelledby: 'araia-labelledby description',
+            imageSrc: 'https://placecats.com/1920/3080',
+        });
+    }
 }

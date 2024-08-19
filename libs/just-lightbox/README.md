@@ -45,6 +45,22 @@ It works with a hyperlinks
 </a>
 ```
 
+Call from code
+
+```ts
+import { JustLightboxService } from 'just-lightbox';
+
+constructor(private lightbox: JustLightboxService) {}
+
+open() {
+    this.lightbox.open({
+        describedby: 'aria-describedby',
+        labelledby: 'araia-labelledby',
+        imageSrc: 'path-to-full-image',
+    });
+}
+```
+
 ## Configuration
 
 ```ts

@@ -23,10 +23,9 @@ export class JustLightboxService {
         private appRef: ApplicationRef,
         private componentFactoryResolver: ComponentFactoryResolver,
         private injector: Injector,
-        // workaround https://github.com/angular/angular/issues/20351#issuecomment-446025223
-        @Inject(DOCUMENT) public document: any,
+        @Inject(DOCUMENT) public document: Document,
     ) {
-        this._document = document as Document;
+        this._document = document;
     }
 
     open(params: IJustLightbox): LightboxComponent | undefined {
@@ -43,12 +42,13 @@ export class JustLightboxService {
         }
 
         wrapper.instance.imageSrc = params.imageSrc;
-        wrapper.instance.labelledby = params.labelledby!;
-        wrapper.instance.describedby = params.describedby!;
+        wrapper.instance.labelledby = params.labelledby;
+        wrapper.instance.describedby = params.describedby;
 
-        wrapper.instance.close$.subscribe((_) => {
+        wrapper.instance.close$.subscribe((_: any) => {
             this._lightbox?.destroy();
             this._isOpen = !this._isOpen;
+            wrapper.instance.close$.unsubscribe();
         });
 
         this._lightbox = wrapper;

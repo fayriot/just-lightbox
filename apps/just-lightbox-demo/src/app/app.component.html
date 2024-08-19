@@ -52,7 +52,7 @@
             </div>
 
             <div class="images__container">
-                ... or with links
+                Use with links
                 <pre>
                     <code [highlight]="codeExamples.links" [language]="'html'"></code>
                 </pre>
@@ -65,6 +65,17 @@
                 >
                     <img [src]="item.thumb" class="images__item" />
                 </a>
+            </div>
+
+            <div class="images__container">
+                Call from code
+                <pre>
+                    <code [highlight]="codeExamples.component" [language]="'ts'"></code>
+                </pre>
+
+                <button class="button" (click)="openLightbox()">
+                    Open image
+                </button>
             </div>
         </div>
 
